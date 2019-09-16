@@ -10,7 +10,9 @@ And here is a sample of training videos from a simulated environment (Gazebo) wi
 
 ![obs1](/dataset/gazebo_sim/obs1/run1/obs1.gif)![obs2](/dataset/gazebo_sim/obs2/run1/obs2.gif)
 
-Sample training data can be found in the folders [/dataset/office_real](/dataset/office_real) and [/dataset/gazebo_sim](/dataset/gazebo_sim). We use images of size 64x64.
+Sample training data can be found in the folders [/dataset/office_real](/dataset/office_real) and [/dataset/gazebo_sim](/dataset/gazebo_sim). The entire dataset can be found <a href="https://iu.box.com/s/nlu8y7yc9863w2yc1pgl9p2s2jxcjlde">here</a>
+
+We use images of size 64x64.
 
 Here is an illustration of the stochastic image predictor model.  This model takes input of the current image and action, but also learns to generate a prior, z<sub>t</sub>, which varies based on the input sequence.  This is further concatenated with the representation before future image prediction. The use of the prior allows for better modeling in stochastic environments and generates clearer images.
 
