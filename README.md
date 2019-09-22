@@ -68,7 +68,7 @@ Our code has been tested on Ubuntu 16.04 using python 3.5, [PyTorch](pytorch.org
 
 1. Download the code ```git clone https://github.com/anwu21/future-image-similarity.git```
 
-2. Download the dataset from https://iu.box.com/s/m34dam93h1wxpu237ireq3kyh0oucc5c and place in the "data" folder.
+2. Download the dataset from https://iu.box.com/s/m34dam93h1wxpu237ireq3kyh0oucc5c and place in the "data" folder to unzip.
 
 3. [train_predictor.py](train_predictor.py) contains the code to train the stochastic future image predictor.  You will need to choose to train on the real life lab dataset or the simulated dataset: set the --dataset flag to either "lab_pose" or "gaz_pose" (ex. python3 train_predictor.py --dataset lab_pose).
 
