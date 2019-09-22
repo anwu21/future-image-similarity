@@ -72,5 +72,5 @@ Our code has been tested on Ubuntu 16.04 using python 3.5, [PyTorch](pytorch.org
 
 3. [train_predictor.py](train_predictor.py) contains the code to train the stochastic future image predictor.  You will need to choose to train on the real life lab dataset or the simulated dataset: set the --dataset flag to either "lab_pose" or "gaz_pose" (ex. python3 train_predictor.py --dataset lab_pose).
 
-4. [train_critic.py](train_critic.py) contains the code to train the critic.  You may use either your newly trained predictor model or the pretrained predictor model contained in the "logs" folder.
+4. [train_critic.py](train_critic.py) contains the code to train the critic.  You may use either your newly trained predictor model or the pretrained predictor model contained in the "logs" folder.  Make sure to set the --dataset flag to either "lab_value" or "gaz_value" (ex. python3 train_critic.py --dataset lab_value).
 
