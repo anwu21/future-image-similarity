@@ -1,5 +1,20 @@
 # Model-based Behavioral Cloning with Future Image Similarity Learning
 
+This repository is for our [CoRL 2019 paper](https://arxiv.org/abs/):
+
+    Alan Wu, AJ Piergiovanni, and Michael S. Ryoo
+    "Model-based Behavioral Cloning with Future Image Similarity Learning"
+    in CoRL 2019
+
+If you find this repository useful for your research, please cite our paper:
+
+        @inproceedings{wu2019fisl,
+              title={Model-based Behavioral Cloning with Future Image Similarity Learning},
+              booktitle={Conference on Robot Learning (CoRL)},
+              author={Alan Wu, AJ Piergiovanni, and Michael S. Ryoo},
+              year={2019}
+        }
+        
 We present a visual imitation learning framework that enables learning of robot action policies solely based on expert samples without any robot trials. Robot exploration and on-policy trials in a real-world environment could often be expensive or dangerous. We present a new approach to address this problem by learning a future scene prediction model solely on a collection of expert trajectories consisting of unlabeled example videos and actions, and by enabling generalized action cloning using _future image similarity_. The robot learns to visually predict the consequences of taking an action, and obtains the policy by evaluating how similar the predicted future image is to an expert image. We develop a stochastic action-conditioned convolutional autoencoder, and present how we take advantage of future images for robot learning.  We conduct experiments in simulated and real-life environments using a ground mobility robot with and without obstacles, and compare our models to multiple baseline methods.
 
 Here is a sample of training videos from a real office environment with various targets:
@@ -10,7 +25,7 @@ And here is a sample of training videos from a simulated environment (Gazebo) wi
 
 ![obs1](/dataset/gazebo_sim/obs1/run1/obs1.gif)![obs2](/dataset/gazebo_sim/obs2/run1/obs2.gif)
 
-Sample training data can be found in the folders [/dataset/office_real](/dataset/office_real) and [/dataset/gazebo_sim](/dataset/gazebo_sim). We use images of size 64x64.
+Sample training data can be found in the folders [/dataset/office_real](/dataset/office_real) and [/dataset/gazebo_sim](/dataset/gazebo_sim). The entire dataset can be downloaded by clicking the link here: <a href="https://iu.box.com/s/nlu8y7yc9863w2yc1pgl9p2s2jxcjlde">Dataset</a>. We use images of size 64x64.
 
 Here is an illustration of the stochastic image predictor model.  This model takes input of the current image and action, but also learns to generate a prior, z<sub>t</sub>, which varies based on the input sequence.  This is further concatenated with the representation before future image prediction. The use of the prior allows for better modeling in stochastic environments and generates clearer images.
 
