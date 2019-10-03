@@ -42,7 +42,7 @@ class Lab(object):
         return 10000
 
     def svg_gen_diff_pose_value(self, curr_angle, R):
-        max_angle = 0.17453292519943295 #10*(pi/180)
+        max_angle = 0.5235987755982988 #30*(pi/180)
         theta = np.random.uniform(-max_angle, max_angle)
         dx = R*cos(curr_angle + theta)
         dy = R*sin(curr_angle + theta)
