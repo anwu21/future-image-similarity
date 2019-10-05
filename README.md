@@ -58,3 +58,20 @@ We verified our future image prediction model and critic model in real life and 
 
 ![Test trajectories](/figures/imitation_traj_airfil.png)
 
+
+# Requirements
+
+Our code has been tested on Ubuntu 16.04 using python 3.5, [PyTorch](pytorch.org) version 0.3.0 with a Titan X GPU.
+
+
+# Setup
+
+1. Download the code ```git clone https://github.com/anwu21/future-image-similarity.git```
+
+2. Download the dataset from https://iu.box.com/s/m34dam93h1wxpu237ireq3kyh0oucc5c and place in the "data" folder to unzip.
+
+3. [train_predictor.py](train_predictor.py) contains the code to train the stochastic future image predictor.  You will need to choose to train on the real life lab dataset or the simulated dataset: set the --dataset flag to either "lab_pose" or "gaz_pose" (ex. python3 train_predictor.py --dataset lab_pose).
+
+4. [train_critic.py](train_critic.py) contains the code to train the critic.  You may use either your newly trained predictor model or the pretrained predictor model contained in the "logs" folder.  Make sure to set the --dataset flag to either "lab_value" or "gaz_value" (ex. python3 train_critic.py --dataset lab_value).
+
+5. Once you have trained a predictor and a critic, you can obtain the robot action by feeding an image and an array of N action candidates to the predictor.  The best action is the candidate that yields the highest value from the critic.
