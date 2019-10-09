@@ -1,6 +1,6 @@
 # Model-based Behavioral Cloning with Future Image Similarity Learning
 
-This repository is for our [CoRL 2019 paper](https://arxiv.org/abs/):
+This repository is for our [CoRL 2019 paper](http://arxiv.org/abs/1910.03157):
 
     Alan Wu, AJ Piergiovanni, and Michael S. Ryoo
     "Model-based Behavioral Cloning with Future Image Similarity Learning"
