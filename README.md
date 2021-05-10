@@ -1,6 +1,6 @@
 # Model-based Behavioral Cloning with Future Image Similarity Learning
 
-This repository is for our [CoRL 2019 paper](https://arxiv.org/abs/):
+This repository is for our [CoRL 2019 paper](http://arxiv.org/abs/1910.03157):
 
     Alan Wu, AJ Piergiovanni, and Michael S. Ryoo
     "Model-based Behavioral Cloning with Future Image Similarity Learning"
@@ -74,4 +74,4 @@ Our code has been tested on Ubuntu 16.04 using python 3.5, [PyTorch](pytorch.org
 
 4. [train_critic.py](train_critic.py) contains the code to train the critic.  You may use either your newly trained predictor model or the pretrained predictor model contained in the "logs" folder.  Make sure to set the --dataset flag to either "lab_value" or "gaz_value" (ex. python3 train_critic.py --dataset lab_value).
 
-5. Once you have trained a predictor and a critic, you can obtain the robot action by feeding an image and an array of N action candidates to the predictor.  The best action is the candidate that yields the highest value from the critic.
+5. Once you have trained a predictor and a critic, you can obtain the robot action by feeding an image and an array of N action candidates to the predictor.  The optimal action is the candidate that leads to the highest value from the critic.  [action_example.py](action_example.py) provides an example of obtaining the action.
